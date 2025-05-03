@@ -1,0 +1,1 @@
+from .navigator_styles import NavigatorStyles

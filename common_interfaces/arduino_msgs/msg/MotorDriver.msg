@@ -1,0 +1,7 @@
+float32 motor_voltage
+float32 left_motor_current
+float32 right_motor_current
+float32 driver_temp
+int16 left_motor_temp
+int16 right_motor_temp
+bool motor_status

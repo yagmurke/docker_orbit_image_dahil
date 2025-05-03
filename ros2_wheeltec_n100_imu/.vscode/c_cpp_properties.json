@@ -1,0 +1,38 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "${default}",
+        "limitSymbolsToIncludedHeaders": false
+      },
+      "includePath": [
+        "/home/ovali/new_ws/install/teleop_twist_joy/include/**",
+        "/home/ovali/new_ws/install/serial/include/**",
+        "/home/ovali/new_ws/install/rviz2_py/include/**",
+        "/home/ovali/new_ws/install/realsense2_camera/include/**",
+        "/home/ovali/new_ws/install/realsense2_camera_msgs/include/**",
+        "/home/ovali/new_ws/install/nav2_straightline_planner/include/**",
+        "/home/ovali/new_ws/install/depthimage_to_laserscan/include/**",
+        "/home/ovali/new_ws/install/arduino_msgs/include/**",
+        "/opt/ros/galactic/include/**",
+        "/home/ovali/new_ws/src/depthimage_to_laserscan/include/**",
+        "/home/ovali/new_ws/src/hub_robot/common_interfaces/arduino_msgs/include/**",
+        "/home/ovali/new_ws/src/hub_robot/hub_motor/include/**",
+        "/home/ovali/new_ws/src/map_server/include/**",
+        "/home/ovali/new_ws/src/nav2_straightline_planner/include/**",
+        "/home/ovali/new_ws/src/realsense-ros/realsense2_camera/include/**",
+        "/home/ovali/new_ws/src/ros2_support_utilities/rviz2_py/include/**",
+        "/home/ovali/new_ws/src/ros2_wheeltec_n100_imu/include/**",
+        "/home/ovali/new_ws/src/serial-ros2/include/**",
+        "/home/ovali/new_ws/src/teleop_twist_joy/include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS",
+      "intelliSenseMode": "gcc-x64",
+      "compilerPath": "/usr/bin/gcc",
+      "cStandard": "gnu11",
+      "cppStandard": "c++14"
+    }
+  ],
+  "version": 4
+}

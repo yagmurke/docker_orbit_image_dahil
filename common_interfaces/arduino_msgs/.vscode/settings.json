@@ -1,0 +1,32 @@
+{
+    "python.autoComplete.extraPaths": [
+        "/home/ovali/new_ws/install/rviz2_py/lib/python3.8/site-packages",
+        "/home/ovali/new_ws/install/realsense2_camera_msgs/lib/python3.8/site-packages",
+        "/home/ovali/new_ws/install/rclpy_parameter_utils/lib/python3.8/site-packages",
+        "/home/ovali/new_ws/install/odom_test/lib/python3.8/site-packages",
+        "/home/ovali/new_ws/install/nct_teleop/lib/python3.8/site-packages",
+        "/home/ovali/new_ws/install/nct_planner/lib/python3.8/site-packages",
+        "/home/ovali/new_ws/install/motor_driver/lib/python3.8/site-packages",
+        "/home/ovali/new_ws/install/map_server/lib/python3.8/site-packages",
+        "/home/ovali/new_ws/install/laser_merger/lib/python3.8/site-packages",
+        "/home/ovali/new_ws/install/hub_motor/lib/python3.8/site-packages",
+        "/home/ovali/new_ws/install/elteksmak_demo/lib/python3.8/site-packages",
+        "/home/ovali/new_ws/install/control_panel/lib/python3.8/site-packages",
+        "/opt/ros/galactic/lib/python3.8/site-packages"
+    ],
+    "python.analysis.extraPaths": [
+        "/home/ovali/new_ws/install/rviz2_py/lib/python3.8/site-packages",
+        "/home/ovali/new_ws/install/realsense2_camera_msgs/lib/python3.8/site-packages",
+        "/home/ovali/new_ws/install/rclpy_parameter_utils/lib/python3.8/site-packages",
+        "/home/ovali/new_ws/install/odom_test/lib/python3.8/site-packages",
+        "/home/ovali/new_ws/install/nct_teleop/lib/python3.8/site-packages",
+        "/home/ovali/new_ws/install/nct_planner/lib/python3.8/site-packages",
+        "/home/ovali/new_ws/install/motor_driver/lib/python3.8/site-packages",
+        "/home/ovali/new_ws/install/map_server/lib/python3.8/site-packages",
+        "/home/ovali/new_ws/install/laser_merger/lib/python3.8/site-packages",
+        "/home/ovali/new_ws/install/hub_motor/lib/python3.8/site-packages",
+        "/home/ovali/new_ws/install/elteksmak_demo/lib/python3.8/site-packages",
+        "/home/ovali/new_ws/install/control_panel/lib/python3.8/site-packages",
+        "/opt/ros/galactic/lib/python3.8/site-packages"
+    ]
+}

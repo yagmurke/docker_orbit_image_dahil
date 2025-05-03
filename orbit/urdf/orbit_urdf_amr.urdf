@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="utf-8"?>
+<robot
+  name="hub_motor">
+  <link name="base_link">
+  </link>
+  <link
+    name="govde">
+    <inertial>
+      <origin
+        xyz="4.0452E-16 -1.6411E-16 0.014818"
+        rpy="0 0 0" />
+      <mass
+        value="2.3002" />
+      <inertia
+        ixx="0.049792"
+        ixy="2.8975E-17"
+        ixz="-3.8083E-17"
+        iyy="0.083424"
+        iyz="-8.9268E-18"
+        izz="0.12213" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://hub_motor/meshes/son/govde.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://hub_motor/meshes/son/govde.STL" />
+      </geometry>
+    </collision>
+  </link>
+   <joint name="base_link_joint" type="fixed">
+    <origin rpy="0 0 0" xyz="0 0 0" />
+    <parent link="base_link" />
+    <child link="govde" />
+  </joint>
+  <link
+    name="sol">
+    <inertial>
+      <origin
+        xyz="4.3368E-19 -0.025409 -4.1633E-17"
+        rpy="0 0 0" />
+      <mass
+        value="1.5816" />
+      <inertia
+        ixx="0.0042973"
+        ixy="2.6851E-19"
+        ixz="-8.8091E-20"
+        iyy="0.0078542"
+        iyz="1.3704E-18"
+        izz="0.0042973" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://hub_motor/meshes/son/sol.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.50196 0.50196 0.50196 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://hub_motor/meshes/son/sol.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="sol_to_govde"
+    type="continuous">
+    <origin
+      xyz="0 0.25 0.10"
+      rpy="0 0 0" />
+    <parent
+      link="govde" />
+    <child
+      link="sol" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      effort="1"
+      velocity="1" />
+  </joint>
+  <link
+    name="sag">
+    <inertial>
+      <origin
+        xyz="-8.6821E-21 0.025409 1.3878E-17"
+        rpy="0 0 0" />
+      <mass
+        value="1.5816" />
+      <inertia
+        ixx="0.0042973"
+        ixy="-1.9312E-19"
+        ixz="-2.6766E-19"
+        iyy="0.0078542"
+        iyz="1.789E-18"
+        izz="0.0042973" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://hub_motor/meshes/son/sag.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.50196 0.50196 0.50196 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://hub_motor/meshes/son/sag.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="sag_to_govde"
+    type="continuous">
+    <origin
+      xyz="0 -0.25 0.10"
+      rpy="0 0 0" />
+    <parent
+      link="govde" />
+    <child
+      link="sag" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      effort="1"
+      velocity="1" />
+  </joint>
+  <link
+    name="laser">
+    <inertial>
+      <origin
+        xyz="0 3.7947E-18 -0.020141"
+        rpy="0 0 0" />
+      <mass
+        value="0.25917" />
+      <inertia
+        ixx="0.00013673"
+        ixy="6.591E-21"
+        ixz="2.1885E-19"
+        iyy="0.00023273"
+        iyz="-2.1301E-20"
+        izz="0.00023963" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://hub_motor/meshes/son/lidar_1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://hub_motor/meshes/son/lidar_1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="laser_to_govde"
+    type="fixed">
+    <origin
+      xyz="0.32146 -0.20162 0.225"
+      rpy="0 0 -0.78" />
+    <parent
+      link="govde" />
+    <child
+      link="laser" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+    <link
+    name="camera2_link">
+      <origin
+        xyz="0 3.7947E-18 -0.020141"
+        rpy="0 0 0" />
+  </link>
+  <joint
+    name="camera2_to_govde"
+    type="fixed">
+    <origin
+      xyz="0.32 0 0.13"
+      rpy="3.14 0.1 0" />
+    <parent
+      link="govde" />
+    <child
+      link="camera2_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+      <link
+    name="camera1_link">
+      <origin
+        xyz="0 3.7947E-18 -0.020141"
+        rpy="0 0 0" />
+  </link>
+  <joint
+    name="camera1_to_govde"
+    type="fixed">
+    <origin
+      xyz="0.350 0 0.32"
+      rpy="0 -0.78 0" />
+    <parent
+      link="govde" />
+    <child
+      link="camera1_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="lidar_2">
+    <inertial>
+      <origin
+        xyz="-1.6653E-16 -3.2526E-19 -0.020141"
+        rpy="0 0 0" />
+      <mass
+        value="0.25917" />
+      <inertia
+        ixx="0.00013673"
+        ixy="-2.2499E-21"
+        ixz="7.1892E-20"
+        iyy="0.00023273"
+        iyz="-1.7221E-20"
+        izz="0.00023963" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://hub_motor/meshes/son/lidar_2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://hub_motor/meshes/son/lidar_2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="lidar_2_to_govde"
+    type="fixed">
+    <origin
+      xyz="-0.32146 0.20162 0.225"
+      rpy="0 0 2.35" />
+    <parent
+      link="govde" />
+    <child
+      link="lidar_2" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="imu">
+    <inertial>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="0" />
+      <inertia
+        ixx="0"
+        ixy="0"
+        ixz="0"
+        iyy="0"
+        iyz="0"
+        izz="0" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://hub_motor/meshes/son/imu.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://hub_motor/meshes/son/imu.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="imu_to_govde"
+    type="fixed">
+    <origin
+      xyz="0 0 0.0301"
+      rpy="0 0 0" />
+    <parent
+      link="govde" />
+    <child
+      link="imu" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+</robot>

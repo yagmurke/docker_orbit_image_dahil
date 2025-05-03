@@ -1,0 +1,2 @@
+float32 voltage_smth
+float32 current_smth

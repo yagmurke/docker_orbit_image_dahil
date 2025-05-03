@@ -1,0 +1,2 @@
+int32 emmergency_btn
+bool motions_status
